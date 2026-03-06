@@ -94,6 +94,12 @@ style: |
 **Securely exposing homelab services to the Internet**
 without opening firewall ports
 
+<br>
+
+<small style="color:#94a3b8; font-size:0.6em;">
+https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: BUILD_TIMESTAMP
+</small>
+
 ---
 
 # The Problem

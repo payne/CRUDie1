@@ -50,3 +50,26 @@ Session ID: `b6ffd501...`
 
 contrast on slide 6 is still very low.  Make it easier to read.
 
+## User [2026-03-06 09:42:24]
+
+Like https://github.com/payne/goHAM2026 setup so when changes to marp source code are pushed to github, github automatically regenerates index.html.  Include the URL of the github repo where this project lives on the first slide.  And include the time the slide deck was generated, in local time, on the first slide.
+
+## Claude [2026-03-06 09:44:43]
+
+Done. Here's what was set up:
+
+**`.github/workflows/build-presentation.yml`** — triggers on pushes to `homelab-saas-presentation.md` (or the workflow file itself), then:
+1. Makes a temp copy of the source, injects the build timestamp in `America/Chicago` time
+2. Runs `marp-cli` to generate `index.html`
+3. Commits and pushes only `index.html` (the source `.md` is never modified)
+
+**First slide** now shows:
+```
+https://github.com/payne/CRUDie1 · Generated: BUILD_TIMESTAMP
+```
+The `BUILD_TIMESTAMP` placeholder is replaced at build time (e.g. `2026-03-06 04:15 PM CST`).
+
+**One thing to enable manually:** Go to your repo's **Settings → Pages** and set source to "Deploy from a branch" → `main` branch, root `/`. That makes `index.html` live at `https://payne.github.io/CRUDie1/`.
+
+---
+

@@ -1,0 +1,53 @@
+name: Build Marp Presentation
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "homelab-saas-presentation.md"
+      - ".github/workflows/build-presentation.yml"
+  workflow_dispatch: # Allow manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write # Needed to commit built files back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build index.html with injected timestamp
+        run: |
+          BUILD_TIME=$(TZ=America/Chicago date '+%Y-%m-%d %I:%M %p %Z')
+          cp homelab-saas-presentation.md _build.md
+          sed -i "s/BUILD_TIMESTAMP/${BUILD_TIME}/g" _build.md
+          npx --yes @marp-team/marp-cli@latest \
+            _build.md \
+            --html \
+            --allow-local-files \
+            -o index.html
+          rm _build.md
+
+      - name: Commit and push index.html
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --staged --quiet; then
+            echo "No changes to index.html — skipping commit."
+          else
+            git commit -m "ci: rebuild presentation [skip ci]"
+            git push
+          fi
