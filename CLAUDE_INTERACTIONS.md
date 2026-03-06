@@ -73,3 +73,31 @@ The `BUILD_TIMESTAMP` placeholder is replaced at build time (e.g. `2026-03-06 04
 
 ---
 
+## User [2026-03-06 10:46:10]
+
+I have added slide 2.  Put a numbered list of text on the left side of the slide.  Have the text float over the image.  The text should say:
+
+## Claude [2026-03-06 10:46:12]
+
+It looks like your message got cut off — you said "The text should say:" but the text itself wasn't included. What should the list items say?
+
+---
+
+## User [2026-03-06 10:47:22]
+
+here is the app I have running in my home lab
+It is an instance of https://fms.komkon.org/OWRX/
+It is on a different computer, on my LAN, than the one running the docker compose network.
+
+## Claude [2026-03-06 10:47:40]
+
+The numbered list is now overlaid on the left side of the image with a semi-transparent dark background (`rgba(15,23,42,0.75)`) so it's readable against whatever the image shows. The OWRX URL is a clickable link.
+
+If the text box is too wide or too narrow, adjust `max-width:55%`. If you want it positioned lower on the image, add a `top` value like `top:80px`.
+
+---
+
+## User [2026-03-06 10:49:27]
+
+After regenerating the index.html I do not see the words on slide 2.  Put the words on top of the image.
+

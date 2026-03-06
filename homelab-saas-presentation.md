@@ -101,6 +101,21 @@ https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: BUILD_TIMESTAMP
 </small>
 
 ---
+# OpenWebRx+
+
+<div style="position:relative; width:100%;">
+  <img src="image.png" style="width:100%; display:block;">
+  <div style="position:absolute; top:20px; left:20px; background:rgba(15,23,42,0.80); padding:16px 20px; border-radius:8px; max-width:55%; color:#e2e8f0;">
+    <ol>
+      <li>Here is the app I have running in my home lab</li>
+      <li>It is an instance of <a href="https://fms.komkon.org/OWRX/" style="color:#60a5fa;">fms.komkon.org/OWRX</a></li>
+      <li>It is on a different computer, on my LAN, than the one running the docker compose network</li>
+    </ol>
+  </div>
+</div>
+
+
+---
 
 # The Problem
 
