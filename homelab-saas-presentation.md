@@ -88,7 +88,7 @@ style: |
   }
 ---
 
-# SaaS in the Homelab
+# SaaS-ie in the Homelab
 ## Cloudflare Tunnels + OAuth2 + Docker Compose
 
 **Securely exposing homelab services to the Internet**
@@ -114,6 +114,17 @@ https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: BUILD_TIMESTAMP
   </div>
 </div>
 
+---
+
+# OpenWebRx+ running on a rPi with a RTL-SDR
+
+![alt text](image-1.png)
+
+---
+
+# Connected to this Diamond 50A antenna
+
+![alt text](image-2.png)
 
 ---
 
@@ -314,6 +325,10 @@ Add/remove users: edit the file, restart the container.
 - One `docker compose up` deploys the whole proxy stack
 - Secrets in environment variables (`.env` file)
 - Cloudflare handles TLS, DDoS, and DNS
+
+---
+
+# Why This Architecture Works (part 2 of 2)
 
 **Flexibility**
 - Swap in any upstream app
