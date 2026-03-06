@@ -40,3 +40,13 @@ marp homelab-saas-presentation.md --pdf -o presentation.pdf
 
 ---
 
+# Session Started [2026-03-06 09:30:43]
+
+Session ID: `b6ffd501...`
+
+---
+
+## User [2026-03-06 09:31:52]
+
+contrast on slide 6 is still very low.  Make it easier to read.
+

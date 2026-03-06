@@ -34,7 +34,28 @@ style: |
   pre code {
     background: transparent;
     padding: 0;
-    color: #a5f3fc;
+    color: #e2e8f0;
+  }
+  pre code .hljs-attr,
+  pre code .hljs-bullet {
+    color: #93c5fd;
+  }
+  pre code .hljs-string,
+  pre code .hljs-literal {
+    color: #86efac;
+  }
+  pre code .hljs-comment {
+    color: #cbd5e1;
+  }
+  pre code .hljs-variable,
+  pre code .hljs-template-variable {
+    color: #fde68a;
+  }
+  pre code .hljs-number {
+    color: #fde68a;
+  }
+  pre code .hljs-keyword {
+    color: #f9a8d4;
   }
   .highlight {
     color: #f97316;
