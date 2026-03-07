@@ -88,10 +88,10 @@ style: |
   }
 ---
 
-# SaaS-ie in the Homelab
+# SaaS-ie in the Home lab
 ## Cloudflare Tunnels + OAuth2 + Docker Compose
 
-**Securely exposing homelab services to the Internet**
+**Securely exposing home lab services to the Internet**
 without opening firewall ports
 
 <br>
@@ -101,6 +101,16 @@ https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: BUILD_TIMESTAMP
 </small>
 
 ---
+
+# Free beer tier of Cloudflare is limited
+
+Only 50 named users may use cloudflare authenticaiton on the free tier.  [OAuth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy) gets around this limitation.
+
+![alt text](image-3.png)
+
+
+---
+
 # OpenWebRx+
 
 <div style="position:relative; width:100%;">
