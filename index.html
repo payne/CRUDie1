@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="C"><head><title>SaaS-ie in the Homelab</title><meta property="og:title" content="SaaS-ie in the Homelab"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{--fgColor-danger:light-dark(#d1242f, #f85149);--bgColor-attention-muted:light-dark(#fff8c5, #bb800926);--bgColor-muted:light-dark(#f6f8fa, #151b23);--bgColor-neutral-muted:light-dark(#818b981f, #656c7633);--borderColor-accent-emphasis:light-dark(#0969da, #1f6feb);--borderColor-attention-emphasis:light-dark(#9a6700, #9e6a03);--borderColor-danger-emphasis:light-dark(#cf222e, #da3633);--borderColor-default:light-dark(#d1d9e0, #3d444d);--borderColor-done-emphasis:light-dark(#8250df, #8957e5);--borderColor-success-emphasis:light-dark(#1a7f37, #238636);--color-prettylights-syntax-brackethighlighter-angle:light-dark(#59636e, #9198a1);--color-prettylights-syntax-brackethighlighter-unmatched:light-dark(#82071e, #f85149);--color-prettylights-syntax-carriage-return-bg:light-dark(#cf222e, #b62324);--color-prettylights-syntax-carriage-return-text:light-dark(#f6f8fa, #f0f6fc);--color-prettylights-syntax-comment:light-dark(#59636e, #9198a1);--color-prettylights-syntax-constant:light-dark(#0550ae, #79c0ff);--color-prettylights-syntax-constant-other-reference-link:light-dark(#0a3069, #a5d6ff);--color-prettylights-syntax-entity:light-dark(#6639ba, #d2a8ff);--color-prettylights-syntax-entity-tag:light-dark(#0550ae, #7ee787);--color-prettylights-syntax-invalid-illegal-text:light-dark(var(--fgColor-danger), var(--fgColor-danger));--color-prettylights-syntax-keyword:light-dark(#cf222e, #ff7b72);--color-prettylights-syntax-markup-changed-bg:light-dark(#ffd8b5, #5a1e02);--color-prettylights-syntax-markup-changed-text:light-dark(#953800, #ffdfb6);--color-prettylights-syntax-markup-deleted-bg:light-dark(#ffebe9, #67060c);--color-prettylights-syntax-markup-deleted-text:light-dark(#82071e, #ffdcd7);--color-prettylights-syntax-markup-heading:light-dark(#0550ae, #1f6feb);--color-prettylights-syntax-markup-ignored-bg:light-dark(#0550ae, #1158c7);--color-prettylights-syntax-markup-ignored-text:light-dark(#d1d9e0, #f0f6fc);--color-prettylights-syntax-markup-inserted-bg:light-dark(#dafbe1, #033a16);--color-prettylights-syntax-markup-inserted-text:light-dark(#116329, #aff5b4);--color-prettylights-syntax-markup-list:light-dark(#3b2300, #f2cc60);--color-prettylights-syntax-meta-diff-range:light-dark(#8250df, #d2a8ff);--color-prettylights-syntax-string:light-dark(#0a3069, #a5d6ff);--color-prettylights-syntax-string-regexp:light-dark(#116329, #7ee787);--color-prettylights-syntax-sublimelinter-gutter-mark:light-dark(#818b98, #3d444d);--color-prettylights-syntax-variable:light-dark(#953800, #ffa657);--fgColor-accent:light-dark(#0969da, #4493f8);--fgColor-attention:light-dark(#9a6700, #d29922);--fgColor-done:light-dark(#8250df, #ab7df8);--fgColor-muted:light-dark(#59636e, #9198a1);--fgColor-success:light-dark(#1a7f37, #3fb950);--bgColor-default:light-dark(#fff, #0d1117);--borderColor-muted:light-dark(#d1d9e0b3, #3d444db3);--color-prettylights-syntax-invalid-illegal-bg:light-dark(var(--bgColor-danger-muted), var(--bgColor-danger-muted));--color-prettylights-syntax-markup-bold:light-dark(#1f2328, #f0f6fc);--color-prettylights-syntax-markup-italic:light-dark(#1f2328, #f0f6fc);--color-prettylights-syntax-storage-modifier-import:light-dark(#1f2328, #f0f6fc);--fgColor-default:light-dark(#1f2328, #f0f6fc);--focus-outlineColor:light-dark(var(--borderColor-accent-emphasis), var(--borderColor-accent-emphasis));--borderColor-neutral-muted:light-dark(var(--borderColor-muted), var(--borderColor-muted));--base-size-16:calc(var(--marpit-root-font-size, 1rem) * 1);--base-size-24:calc(var(--marpit-root-font-size, 1rem) * 1.5);--base-size-4:calc(var(--marpit-root-font-size, 1rem) * 0.25);--base-size-40:calc(var(--marpit-root-font-size, 1rem) * 2.5);--base-size-8:calc(var(--marpit-root-font-size, 1rem) * 0.5);--base-text-weight-medium:500;--base-text-weight-normal:400;--base-text-weight-semibold:600;--fontStack-monospace:ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;--fontStack-sansSerif:-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";}/*!
+<!DOCTYPE html><html lang="C"><head><title>SaaS-ie in the Home lab</title><meta property="og:title" content="SaaS-ie in the Home lab"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{--fgColor-danger:light-dark(#d1242f, #f85149);--bgColor-attention-muted:light-dark(#fff8c5, #bb800926);--bgColor-muted:light-dark(#f6f8fa, #151b23);--bgColor-neutral-muted:light-dark(#818b981f, #656c7633);--borderColor-accent-emphasis:light-dark(#0969da, #1f6feb);--borderColor-attention-emphasis:light-dark(#9a6700, #9e6a03);--borderColor-danger-emphasis:light-dark(#cf222e, #da3633);--borderColor-default:light-dark(#d1d9e0, #3d444d);--borderColor-done-emphasis:light-dark(#8250df, #8957e5);--borderColor-success-emphasis:light-dark(#1a7f37, #238636);--color-prettylights-syntax-brackethighlighter-angle:light-dark(#59636e, #9198a1);--color-prettylights-syntax-brackethighlighter-unmatched:light-dark(#82071e, #f85149);--color-prettylights-syntax-carriage-return-bg:light-dark(#cf222e, #b62324);--color-prettylights-syntax-carriage-return-text:light-dark(#f6f8fa, #f0f6fc);--color-prettylights-syntax-comment:light-dark(#59636e, #9198a1);--color-prettylights-syntax-constant:light-dark(#0550ae, #79c0ff);--color-prettylights-syntax-constant-other-reference-link:light-dark(#0a3069, #a5d6ff);--color-prettylights-syntax-entity:light-dark(#6639ba, #d2a8ff);--color-prettylights-syntax-entity-tag:light-dark(#0550ae, #7ee787);--color-prettylights-syntax-invalid-illegal-text:light-dark(var(--fgColor-danger), var(--fgColor-danger));--color-prettylights-syntax-keyword:light-dark(#cf222e, #ff7b72);--color-prettylights-syntax-markup-changed-bg:light-dark(#ffd8b5, #5a1e02);--color-prettylights-syntax-markup-changed-text:light-dark(#953800, #ffdfb6);--color-prettylights-syntax-markup-deleted-bg:light-dark(#ffebe9, #67060c);--color-prettylights-syntax-markup-deleted-text:light-dark(#82071e, #ffdcd7);--color-prettylights-syntax-markup-heading:light-dark(#0550ae, #1f6feb);--color-prettylights-syntax-markup-ignored-bg:light-dark(#0550ae, #1158c7);--color-prettylights-syntax-markup-ignored-text:light-dark(#d1d9e0, #f0f6fc);--color-prettylights-syntax-markup-inserted-bg:light-dark(#dafbe1, #033a16);--color-prettylights-syntax-markup-inserted-text:light-dark(#116329, #aff5b4);--color-prettylights-syntax-markup-list:light-dark(#3b2300, #f2cc60);--color-prettylights-syntax-meta-diff-range:light-dark(#8250df, #d2a8ff);--color-prettylights-syntax-string:light-dark(#0a3069, #a5d6ff);--color-prettylights-syntax-string-regexp:light-dark(#116329, #7ee787);--color-prettylights-syntax-sublimelinter-gutter-mark:light-dark(#818b98, #3d444d);--color-prettylights-syntax-variable:light-dark(#953800, #ffa657);--fgColor-accent:light-dark(#0969da, #4493f8);--fgColor-attention:light-dark(#9a6700, #d29922);--fgColor-done:light-dark(#8250df, #ab7df8);--fgColor-muted:light-dark(#59636e, #9198a1);--fgColor-success:light-dark(#1a7f37, #3fb950);--bgColor-default:light-dark(#fff, #0d1117);--borderColor-muted:light-dark(#d1d9e0b3, #3d444db3);--color-prettylights-syntax-invalid-illegal-bg:light-dark(var(--bgColor-danger-muted), var(--bgColor-danger-muted));--color-prettylights-syntax-markup-bold:light-dark(#1f2328, #f0f6fc);--color-prettylights-syntax-markup-italic:light-dark(#1f2328, #f0f6fc);--color-prettylights-syntax-storage-modifier-import:light-dark(#1f2328, #f0f6fc);--fgColor-default:light-dark(#1f2328, #f0f6fc);--focus-outlineColor:light-dark(var(--borderColor-accent-emphasis), var(--borderColor-accent-emphasis));--borderColor-neutral-muted:light-dark(var(--borderColor-muted), var(--borderColor-muted));--base-size-16:calc(var(--marpit-root-font-size, 1rem) * 1);--base-size-24:calc(var(--marpit-root-font-size, 1rem) * 1.5);--base-size-4:calc(var(--marpit-root-font-size, 1rem) * 0.25);--base-size-40:calc(var(--marpit-root-font-size, 1rem) * 2.5);--base-size-8:calc(var(--marpit-root-font-size, 1rem) * 0.5);--base-text-weight-medium:500;--base-text-weight-normal:400;--base-text-weight-semibold:600;--fontStack-monospace:ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;--fontStack-sansSerif:-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";}/*!
  * Marp default theme.
  *
  * @theme default
@@ -170,14 +170,14 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="saas-ie-in-the-homelab">SaaS-ie in the Homelab</h1>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="saas-ie-in-the-home-lab">SaaS-ie in the Home lab</h1>
 <h2 id="cloudflare-tunnels--oauth2--docker-compose">Cloudflare Tunnels + OAuth2 + Docker Compose</h2>
-<p><strong>Securely exposing homelab services to the Internet</strong><br />
+<p><strong>Securely exposing home lab services to the Internet</strong><br />
 without opening firewall ports</p>
 <br />
 <small style="color:#94a3b8; font-size:0.6em;">
-https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: 2026-03-06 10:59 AM CST
+https://github.com/payne/CRUDie1 &nbsp;·&nbsp; Generated: 2026-03-07 01:18 PM CST
 </small>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
@@ -342,18 +342,10 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="openwebrx">OpenWebRx+</h1>
-<div style="position:relative; width:100%;">
-  <img src="image.png" style="width:100%; display:block;" />
-  <div style="position:absolute; top:20px; left:20px; background:rgba(15,23,42,0.80); padding:16px 20px; border-radius:8px; max-width:55%; color:#e2e8f0;">
-    <ol>
-      <li>Here is the app I have running in my home lab</li>
-      <li>It is an instance of <a href="https://fms.komkon.org/OWRX/" style="color:#60a5fa;">fms.komkon.org/OWRX</a></li>
-      <li>It is on a different computer, on my LAN, than the one running the docker compose network</li>
-    </ol>
-  </div>
-</div>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="free-beer-tier-of-cloudflare-is-limited">Free beer tier of Cloudflare is limited</h1>
+<p>Only 50 named users may use cloudflare authenticaiton on the free tier.  <a href="https://github.com/oauth2-proxy/oauth2-proxy">OAuth2-proxy</a> gets around this limitation.</p>
+<p><img src="image-3.png" alt="alt text" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -517,9 +509,18 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="openwebrx-running-on-a-rpi-with-a-rtl-sdr">OpenWebRx+ running on a rPi with a RTL-SDR</h1>
-<p><img src="image-1.png" alt="alt text" /></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="openwebrx">OpenWebRx+</h1>
+<div style="position:relative; width:100%;">
+  <img src="image.png" style="width:100%; display:block;" />
+  <div style="position:absolute; top:20px; left:20px; background:rgba(15,23,42,0.80); padding:16px 20px; border-radius:8px; max-width:55%; color:#e2e8f0;">
+    <ol>
+      <li>Here is the app I have running in my home lab</li>
+      <li>It is an instance of <a href="https://fms.komkon.org/OWRX/" style="color:#60a5fa;">fms.komkon.org/OWRX</a></li>
+      <li>It is on a different computer, on my LAN, than the one running the docker compose network</li>
+    </ol>
+  </div>
+</div>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -683,9 +684,9 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="connected-to-this-diamond-50a-antenna">Connected to this Diamond 50A antenna</h1>
-<p><img src="image-2.png" alt="alt text" /></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="openwebrx-running-on-a-rpi-with-a-rtl-sdr">OpenWebRx+ running on a rPi with a RTL-SDR</h1>
+<p><img src="image-1.png" alt="alt text" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -849,17 +850,9 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="the-problem">The Problem</h1>
-<p>You have a cool self-hosted app running in your homelab.<br />
-You want to access it <strong>from anywhere</strong> — securely.</p>
-<p><strong>Traditional options are painful:</strong></p>
-<ul>
-<li>Open a firewall port (attack surface)</li>
-<li>Set up a VPN (friction for every user)</li>
-<li>Use a reverse proxy with TLS cert management (complexity)</li>
-</ul>
-<p><strong>The homelab tax: security vs. accessibility</strong></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="connected-to-this-diamond-50a-antenna">Connected to this Diamond 50A antenna</h1>
+<p><img src="image-2.png" alt="alt text" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1023,26 +1016,17 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="the-solution-stack">The Solution Stack</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Internet
-   |
-   v
-1.AppFarms.org  (Cloudflare DNS)
-   |
-   v
-Cloudflare Edge  (zero-trust tunnel)
-   |
-   v
-cloudflared  (docker container, no inbound ports)
-   |
-   v
-oauth2-proxy  (Google auth gate)
-   |
-   v
-OpenWebRX+  (homelab SDR receiver)
-</code></pre>
-<p>Zero open firewall ports. Auth enforced before any app traffic.</p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="the-problem">The Problem</h1>
+<p>You have a cool self-hosted app running in your homelab.<br />
+You want to access it <strong>from anywhere</strong> — securely.</p>
+<p><strong>Traditional options are painful:</strong></p>
+<ul>
+<li>Open a firewall port (attack surface)</li>
+<li>Set up a VPN (friction for every user)</li>
+<li>Use a reverse proxy with TLS cert management (complexity)</li>
+</ul>
+<p><strong>The homelab tax: security vs. accessibility</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1206,24 +1190,26 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="component-1-cloudflare-tunnel">Component 1: Cloudflare Tunnel</h1>
-<p><strong>What it does:</strong> Creates an outbound-only encrypted tunnel from your homelab to Cloudflare's edge.</p>
-<ul>
-<li>No inbound firewall rules needed</li>
-<li><code>cloudflared</code> daemon initiates the connection</li>
-<li>Cloudflare routes <code>1.appfarms.org</code> traffic into your network</li>
-</ul>
-<p><strong>The key insight:</strong> Your homelab <em>calls out</em> to Cloudflare, not the other way around.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-comment"># cloudflared-config.yml</span>
-<span class="hljs-attr">tunnel:</span> <span class="hljs-string">appfarms-tunnel</span>
-<span class="hljs-attr">credentials-file:</span> <span class="hljs-string">/etc/cloudflared/credentials.json</span>
-
-<span class="hljs-attr">ingress:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostname:</span> <span class="hljs-number">1.</span><span class="hljs-string">appfarms.org</span>
-    <span class="hljs-attr">service:</span> <span class="hljs-string">http://oauth2-proxy:4180</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">service:</span> <span class="hljs-string">http_status:404</span>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="the-solution-stack">The Solution Stack</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Internet
+   |
+   v
+1.AppFarms.org  (Cloudflare DNS)
+   |
+   v
+Cloudflare Edge  (zero-trust tunnel)
+   |
+   v
+cloudflared  (docker container, no inbound ports)
+   |
+   v
+oauth2-proxy  (Google auth gate)
+   |
+   v
+OpenWebRX+  (homelab SDR receiver)
 </code></pre>
+<p>Zero open firewall ports. Auth enforced before any app traffic.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1387,22 +1373,24 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="component-2-oauth2-proxy">Component 2: oauth2-proxy</h1>
-<p><strong>What it does:</strong> Sits between Cloudflare and your app.<br />
-Forces Google OAuth login before forwarding any request.</p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="component-1-cloudflare-tunnel">Component 1: Cloudflare Tunnel</h1>
+<p><strong>What it does:</strong> Creates an outbound-only encrypted tunnel from your homelab to Cloudflare's edge.</p>
 <ul>
-<li>Only users in <code>authorized_gmails.txt</code> get through</li>
-<li>Everyone else: 403</li>
-<li>No app changes needed — pure middleware</li>
+<li>No inbound firewall rules needed</li>
+<li><code>cloudflared</code> daemon initiates the connection</li>
+<li>Cloudflare routes <code>1.appfarms.org</code> traffic into your network</li>
 </ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>GET https://1.appfarms.org/
-  -&gt; oauth2-proxy checks session cookie
-  -&gt; Not authenticated? Redirect to Google login
-  -&gt; Authenticated but not authorized? 403
-  -&gt; Authorized? Forward to upstream app
+<p><strong>The key insight:</strong> Your homelab <em>calls out</em> to Cloudflare, not the other way around.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-comment"># cloudflared-config.yml</span>
+<span class="hljs-attr">tunnel:</span> <span class="hljs-string">appfarms-tunnel</span>
+<span class="hljs-attr">credentials-file:</span> <span class="hljs-string">/etc/cloudflared/credentials.json</span>
+
+<span class="hljs-attr">ingress:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">hostname:</span> <span class="hljs-number">1.</span><span class="hljs-string">appfarms.org</span>
+    <span class="hljs-attr">service:</span> <span class="hljs-string">http://oauth2-proxy:4180</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">service:</span> <span class="hljs-string">http_status:404</span>
 </code></pre>
-<p>Callback URL: <code>https://1.appfarms.org/oauth2/callback</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1566,30 +1554,22 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="component-3-docker-compose-network">Component 3: Docker Compose Network</h1>
-<p>Everything runs in one <code>docker compose</code> stack on a single host.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">services:</span>
-  <span class="hljs-attr">cloudflared:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">cloudflare/cloudflared:latest</span>
-    <span class="hljs-attr">depends_on:</span> [<span class="hljs-string">oauth2-proxy</span>]
-    <span class="hljs-attr">volumes:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">./cloudflared:/etc/cloudflared</span>
-
-  <span class="hljs-attr">oauth2-proxy:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">quay.io/oauth2-proxy/oauth2-proxy:latest</span>
-    <span class="hljs-attr">volumes:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">./authorized_gmails.txt:/authorized_gmails.txt</span>
-    <span class="hljs-attr">environment:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_CLIENT_ID=${GOOGLE_CLIENT_ID}</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_COOKIE_SECRET=${COOKIE_SECRET}</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_UPSTREAM=http://openwebrx:8073</span>
-
-<span class="hljs-attr">networks:</span>
-  <span class="hljs-attr">default:</span>
-    <span class="hljs-attr">name:</span> <span class="hljs-string">proxy-net</span>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="component-2-oauth2-proxy">Component 2: oauth2-proxy</h1>
+<p><strong>What it does:</strong> Sits between Cloudflare and your app.<br />
+Forces Google OAuth login before forwarding any request.</p>
+<ul>
+<li>Only users in <code>authorized_gmails.txt</code> get through</li>
+<li>Everyone else: 403</li>
+<li>No app changes needed — pure middleware</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>GET https://1.appfarms.org/
+  -&gt; oauth2-proxy checks session cookie
+  -&gt; Not authenticated? Redirect to Google login
+  -&gt; Authenticated but not authorized? 403
+  -&gt; Authorized? Forward to upstream app
 </code></pre>
+<p>Callback URL: <code>https://1.appfarms.org/oauth2/callback</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1753,55 +1733,30 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="the-traffic-flow-end-to-end">The Traffic Flow (End-to-End)</h1>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Where</th>
-<th>What Happens</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Browser</td>
-<td>User visits <code>1.appfarms.org</code></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Cloudflare Edge</td>
-<td>TLS terminated, tunnel selected</td>
-</tr>
-<tr>
-<td>3</td>
-<td><code>cloudflared</code></td>
-<td>Traffic delivered into docker network</td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>oauth2-proxy</code></td>
-<td>Session cookie checked</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Google</td>
-<td>OAuth2 login (if needed)</td>
-</tr>
-<tr>
-<td>6</td>
-<td><code>oauth2-proxy</code></td>
-<td>Email checked against allowlist</td>
-</tr>
-<tr>
-<td>7</td>
-<td>OpenWebRX+</td>
-<td>App receives authenticated request</td>
-</tr>
-</tbody>
-</table>
-<p><strong>The app never sees an unauthenticated request.</strong></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="component-3-docker-compose-network">Component 3: Docker Compose Network</h1>
+<p>Everything runs in one <code>docker compose</code> stack on a single host.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">services:</span>
+  <span class="hljs-attr">cloudflared:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">cloudflare/cloudflared:latest</span>
+    <span class="hljs-attr">depends_on:</span> [<span class="hljs-string">oauth2-proxy</span>]
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./cloudflared:/etc/cloudflared</span>
+
+  <span class="hljs-attr">oauth2-proxy:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">quay.io/oauth2-proxy/oauth2-proxy:latest</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./authorized_gmails.txt:/authorized_gmails.txt</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_CLIENT_ID=${GOOGLE_CLIENT_ID}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_COOKIE_SECRET=${COOKIE_SECRET}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">OAUTH2_PROXY_UPSTREAM=http://openwebrx:8073</span>
+
+<span class="hljs-attr">networks:</span>
+  <span class="hljs-attr">default:</span>
+    <span class="hljs-attr">name:</span> <span class="hljs-string">proxy-net</span>
+</code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -1965,22 +1920,55 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="the-app-openwebrx">The App: OpenWebRX+</h1>
-<p>A web-based <strong>software-defined radio</strong> receiver.<br />
-Lets you tune into radio signals from your browser.</p>
-<ul>
-<li>Runs on the homelab, not exposed directly</li>
-<li>Accessed only through the auth proxy chain</li>
-<li>URL stays internal: <code>http://openwebrx-host:8073</code></li>
-</ul>
-<p><strong>This pattern works for any homelab service:</strong></p>
-<ul>
-<li>Home Assistant</li>
-<li>Grafana</li>
-<li>Paperless-ngx</li>
-<li>Anything with a web UI</li>
-</ul>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="the-traffic-flow-end-to-end">The Traffic Flow (End-to-End)</h1>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Where</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Browser</td>
+<td>User visits <code>1.appfarms.org</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cloudflare Edge</td>
+<td>TLS terminated, tunnel selected</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>cloudflared</code></td>
+<td>Traffic delivered into docker network</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>oauth2-proxy</code></td>
+<td>Session cookie checked</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Google</td>
+<td>OAuth2 login (if needed)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>oauth2-proxy</code></td>
+<td>Email checked against allowlist</td>
+</tr>
+<tr>
+<td>7</td>
+<td>OpenWebRX+</td>
+<td>App receives authenticated request</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The app never sees an unauthenticated request.</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -2144,20 +2132,22 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="access-control-the-gmail-allowlist">Access Control: The Gmail Allowlist</h1>
-<p>Simple, auditable, file-based access control.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code># authorized_gmails.txt
-alice@gmail.com
-bob@gmail.com
-friend@gmail.com
-</code></pre>
-<p><strong>Audit who has accessed the app:</strong></p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">docker inspect oauth2-proxy --format=<span class="hljs-string">&#x27;{{.LogPath}}&#x27;</span> \
-  | xargs <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cat</span> \
-  | jq <span class="hljs-string">&#x27;select(.authorized == true)&#x27;</span>
-</code></pre>
-<p>Add/remove users: edit the file, restart the container.</p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="the-app-openwebrx">The App: OpenWebRX+</h1>
+<p>A web-based <strong>software-defined radio</strong> receiver.<br />
+Lets you tune into radio signals from your browser.</p>
+<ul>
+<li>Runs on the homelab, not exposed directly</li>
+<li>Accessed only through the auth proxy chain</li>
+<li>URL stays internal: <code>http://openwebrx-host:8073</code></li>
+</ul>
+<p><strong>This pattern works for any homelab service:</strong></p>
+<ul>
+<li>Home Assistant</li>
+<li>Grafana</li>
+<li>Paperless-ngx</li>
+<li>Anything with a web UI</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -2321,31 +2311,20 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="what-you-need-to-set-this-up">What You Need to Set This Up</h1>
-<ol>
-<li>
-<p><strong>Cloudflare account</strong> — free tier works</p>
-<ul>
-<li>Domain on Cloudflare DNS</li>
-<li>Tunnel created via <code>cloudflared tunnel create</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Google Cloud Console</strong> — free</p>
-<ul>
-<li>OAuth2 credentials (Client ID + Secret)</li>
-<li>Authorized redirect URI: <code>https://your-domain/oauth2/callback</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Docker + Docker Compose</strong> — on any homelab machine</p>
-</li>
-<li>
-<p><strong>The app</strong> — running anywhere reachable from the compose host</p>
-</li>
-</ol>
-<p><strong>Reference implementation:</strong> github.com/payne/appfarms-proxy</p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="access-control-the-gmail-allowlist">Access Control: The Gmail Allowlist</h1>
+<p>Simple, auditable, file-based access control.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code># authorized_gmails.txt
+alice@gmail.com
+bob@gmail.com
+friend@gmail.com
+</code></pre>
+<p><strong>Audit who has accessed the app:</strong></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">docker inspect oauth2-proxy --format=<span class="hljs-string">&#x27;{{.LogPath}}&#x27;</span> \
+  | xargs <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cat</span> \
+  | jq <span class="hljs-string">&#x27;select(.authorized == true)&#x27;</span>
+</code></pre>
+<p>Add/remove users: edit the file, restart the container.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -2509,20 +2488,31 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="why-this-architecture-works">Why This Architecture Works</h1>
-<p><strong>Security</strong></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="what-you-need-to-set-this-up">What You Need to Set This Up</h1>
+<ol>
+<li>
+<p><strong>Cloudflare account</strong> — free tier works</p>
 <ul>
-<li>Zero open ports on your router/firewall</li>
-<li>Authentication enforced at the edge of your stack</li>
-<li>App code untouched — no auth logic to implement</li>
+<li>Domain on Cloudflare DNS</li>
+<li>Tunnel created via <code>cloudflared tunnel create</code></li>
 </ul>
-<p><strong>Simplicity</strong></p>
+</li>
+<li>
+<p><strong>Google Cloud Console</strong> — free</p>
 <ul>
-<li>One <code>docker compose up</code> deploys the whole proxy stack</li>
-<li>Secrets in environment variables (<code>.env</code> file)</li>
-<li>Cloudflare handles TLS, DDoS, and DNS</li>
+<li>OAuth2 credentials (Client ID + Secret)</li>
+<li>Authorized redirect URI: <code>https://your-domain/oauth2/callback</code></li>
 </ul>
+</li>
+<li>
+<p><strong>Docker + Docker Compose</strong> — on any homelab machine</p>
+</li>
+<li>
+<p><strong>The app</strong> — running anywhere reachable from the compose host</p>
+</li>
+</ol>
+<p><strong>Reference implementation:</strong> github.com/payne/appfarms-proxy</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -2686,13 +2676,19 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="why-this-architecture-works-part-2-of-2">Why This Architecture Works (part 2 of 2)</h1>
-<p><strong>Flexibility</strong></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="why-this-architecture-works">Why This Architecture Works</h1>
+<p><strong>Security</strong></p>
 <ul>
-<li>Swap in any upstream app</li>
-<li>Add more tunnels/hostnames as needed</li>
-<li>Works behind CGNAT (no public IP required)</li>
+<li>Zero open ports on your router/firewall</li>
+<li>Authentication enforced at the edge of your stack</li>
+<li>App code untouched — no auth logic to implement</li>
+</ul>
+<p><strong>Simplicity</strong></p>
+<ul>
+<li>One <code>docker compose up</code> deploys the whole proxy stack</li>
+<li>Secrets in environment variables (<code>.env</code> file)</li>
+<li>Cloudflare handles TLS, DDoS, and DNS</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
@@ -2857,19 +2853,14 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
-<h1 id="live-example">Live Example</h1>
-<p><strong><code>1.AppFarms.org</code></strong> — a working deployment of this pattern</p>
-<p>Routing: <code>Cloudflare → cloudflared → oauth2-proxy → OpenWebRX+</code></p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>AppFarms.org
-  |
-  +-- 1.AppFarms.org  → OpenWebRX+ (SDR receiver)
-  |                     [this presentation's example]
-  |
-  +-- *.AppFarms.org  → future homelab services
-                        [same pattern, different upstreams]
-</code></pre>
-<p>Source code: <strong>github.com/payne/appfarms-proxy</strong></p>
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="why-this-architecture-works-part-2-of-2">Why This Architecture Works (part 2 of 2)</h1>
+<p><strong>Flexibility</strong></p>
+<ul>
+<li>Swap in any upstream app</li>
+<li>Add more tunnels/hostnames as needed</li>
+<li>Works behind CGNAT (no public IP required)</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
   font-family: 'Segoe UI', sans-serif;
@@ -3033,7 +3024,183 @@ td {
 tr:nth-child(even) td {
   background: #263548;
 }
-;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="17">
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
+<h1 id="live-example">Live Example</h1>
+<p><strong><code>1.AppFarms.org</code></strong> — a working deployment of this pattern</p>
+<p>Routing: <code>Cloudflare → cloudflared → oauth2-proxy → OpenWebRX+</code></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>AppFarms.org
+  |
+  +-- 1.AppFarms.org  → OpenWebRX+ (SDR receiver)
+  |                     [this presentation's example]
+  |
+  +-- *.AppFarms.org  → future homelab services
+                        [same pattern, different upstreams]
+</code></pre>
+<p>Source code: <strong>github.com/payne/appfarms-proxy</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-background-color="#0f172a" data-color="#e2e8f0" data-theme="default" data-style="section {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 60px;
+}
+h1 {
+  color: #f97316;
+  font-size: 2em;
+  border-bottom: 3px solid #f97316;
+  padding-bottom: 10px;
+}
+h2 {
+  color: #fb923c;
+  font-size: 1.4em;
+}
+code {
+  background: #1e293b;
+  color: #7dd3fc;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+pre {
+  background: #1e293b;
+  border-left: 4px solid #f97316;
+  border-radius: 8px;
+  padding: 20px;
+}
+pre code {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+pre code .hljs-attr,
+pre code .hljs-bullet {
+  color: #93c5fd;
+}
+pre code .hljs-string,
+pre code .hljs-literal {
+  color: #86efac;
+}
+pre code .hljs-comment {
+  color: #cbd5e1;
+}
+pre code .hljs-variable,
+pre code .hljs-template-variable {
+  color: #fde68a;
+}
+pre code .hljs-number {
+  color: #fde68a;
+}
+pre code .hljs-keyword {
+  color: #f9a8d4;
+}
+.highlight {
+  color: #f97316;
+  font-weight: bold;
+}
+a {
+  color: #60a5fa;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+}
+th {
+  background: #f97316;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 10px 16px;
+  text-align: left;
+  border: 2px solid #f97316;
+}
+td {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 10px 16px;
+  border: 1px solid #334155;
+}
+tr:nth-child(even) td {
+  background: #263548;
+}
+" lang="C" data-marpit-pagination="18" style="--paginate:true;--background-color:#0f172a;--color:#e2e8f0;--theme:default;--style:section {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 60px;
+}
+h1 {
+  color: #f97316;
+  font-size: 2em;
+  border-bottom: 3px solid #f97316;
+  padding-bottom: 10px;
+}
+h2 {
+  color: #fb923c;
+  font-size: 1.4em;
+}
+code {
+  background: #1e293b;
+  color: #7dd3fc;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+pre {
+  background: #1e293b;
+  border-left: 4px solid #f97316;
+  border-radius: 8px;
+  padding: 20px;
+}
+pre code {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+pre code .hljs-attr,
+pre code .hljs-bullet {
+  color: #93c5fd;
+}
+pre code .hljs-string,
+pre code .hljs-literal {
+  color: #86efac;
+}
+pre code .hljs-comment {
+  color: #cbd5e1;
+}
+pre code .hljs-variable,
+pre code .hljs-template-variable {
+  color: #fde68a;
+}
+pre code .hljs-number {
+  color: #fde68a;
+}
+pre code .hljs-keyword {
+  color: #f9a8d4;
+}
+.highlight {
+  color: #f97316;
+  font-weight: bold;
+}
+a {
+  color: #60a5fa;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+}
+th {
+  background: #f97316;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 10px 16px;
+  text-align: left;
+  border: 2px solid #f97316;
+}
+td {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 10px 16px;
+  border: 1px solid #334155;
+}
+tr:nth-child(even) td {
+  background: #263548;
+}
+;color:#e2e8f0;background-color:#0f172a;background-image:none;" data-marpit-pagination-total="18">
 <h1 id="summary">Summary</h1>
 <p><strong>The pattern:</strong></p>
 <blockquote>
